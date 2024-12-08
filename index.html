@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Ekolojik Kredi Sistemi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#kayit">Kayıt Ol</a></li>
+                <li><a href="#veri-giris">Veri Girişi</a></li>
+                <li><a href="#veri-goruntuleme">Veri Görüntüle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="kayit">
+        <h2>Öğrenci Kayıt</h2>
+        <form id="ogrenciKayitForm">
+            <label for="ogrenciIsim">İsim:</label>
+            <input type="text" id="ogrenciIsim" required><br>
+
+            <label for="ogrenciSoyisim">Soyisim:</label>
+            <input type="text" id="ogrenciSoyisim" required><br>
+
+            <label for="ogrenciOkul">Okul Adı:</label>
+            <input type="text" id="ogrenciOkul" required><br>
+
+            <label for="ogrenciOkulNo">Okul Numarası:</label>
+            <input type="text" id="ogrenciOkulNo" required><br>
+
+            <label for="ogrenciEmail">E-posta:</label>
+            <input type="email" id="ogrenciEmail" required><br>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </section>
+
+    <section id="veri-giris">
+        <h2>Veri Girişi</h2>
+        <form id="veriGirisForm">
+            <label for="atikk">Atık Türü:</label>
+            <select id="atikk" required>
+                <option value="kağıt">Kağıt</option>
+                <option value="plastik">Plastik</option>
+                <option value="metal">Metal</option>
+                <option value="cam">Cam</option>
+                <option value="elektronik">Elektronik</option>
+                <option value="yağ">Yağ</option>
+                <option value="tekstil">Tekstil</option>
+            </select><br>
+
+            <label for="atikkMiktar">Atık Miktarı (kg):</label>
+            <input type="number" id="atikkMiktar" required><br>
+
+            <label for="dogruAyiklama">Doğru Ayrıştırma?</label>
+            <input type="checkbox" id="dogruAyiklama"><br>
+
+            <button type="submit">Veri Gir</button>
+        </form>
+    </section>
+
+    <section id="veri-goruntuleme">
+        <h2>Veri Görüntüle</h2>
+        <form id="veriGoruntulemeForm">
+            <label for="emailLogin">E-posta:</label>
+            <input type="email" id="emailLogin" required><br>
+
+            <label for="passwordLogin">Şifre:</label>
+            <input type="password" id="passwordLogin" required><br>
+
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <div id="ogrenciBilgileri">
+            <h3>Puanlarınız:</h3>
+            <div id="puanlar"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
